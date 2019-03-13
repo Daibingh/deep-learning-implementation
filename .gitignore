@@ -6,3 +6,7 @@ alexnet-modified-tensorflow/data.pkl
 alexnet-modified-tensorflow/prediction.pkl
 alexnet-modified-tensorflow/mnist_prediction.csv
 alexnet-modified-tensorflow/model
+vgg-tensorflow/__pycache__
+vgg-tensorflow/.idea
+vgg-tensorflow/data
+vgg-tensorflow/model
