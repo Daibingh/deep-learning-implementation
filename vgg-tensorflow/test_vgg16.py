@@ -1,11 +1,18 @@
 import numpy as np
 import tensorflow as tf
+import matplotlib.pyplot as plt
 
 import vgg16
 import utils
+import os
 
 img1 = utils.load_image("./test_data/tiger.jpeg")
 img2 = utils.load_image("./test_data/puzzle.jpeg")
+
+fig, ax = plt.subplots(1, 2)
+ax[0].imshow(img1)
+ax[1].imshow(img2)
+# os._exit(0)
 
 batch1 = img1.reshape((1, 224, 224, 3))
 batch2 = img2.reshape((1, 224, 224, 3))
@@ -26,3 +33,5 @@ with tf.Session() as sess:
     print(prob)
     utils.print_prob(prob[0], './synset.txt')
     utils.print_prob(prob[1], './synset.txt')
+
+plt.show()
